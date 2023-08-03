@@ -3,10 +3,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const _ = require("lodash");
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
-const glob = require("glob");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
