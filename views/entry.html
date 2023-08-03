@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Secret Scriptures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <div class="color-cover">
+        <div class="wrapper">
+            <div class="cover-header">
+                <a href="/home"><img class="logo" src="/content/Logo.svg" alt="My Secret Scriptures Logo"></a>
+                <img class="cover-img random-bg" src="" alt="A cover image">
+                <!-- needs to be fixed -->
+            </div>
+
+            <div class="container mt-5 pb-5">
+                <div class="row">
+
+                    <div class="col entry-content-container d-flex align-items-center flex-column justify-content-center">
+                        <button form="edit-read-form" class="save-exit align-self-end" style="width:fit-content" type="submit">Save & Exit</button>
+                        <form action="/scriptures/{@title@}/edit" method="POST" class="edit-read-form" id="edit-read-form">
+                            <input type="hidden" name="_method" value="PATCH">
+                            <input type="date" name="date" value="{@date@}">
+                            <input type="text" name="title" value="{@title@}">
+                            <textarea oninput="heightAdjust()" class="autoexpand mt-3" name="content">{@content@}</textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const randomImageContainer = document.querySelector(".random-bg");
+    const randomImageIndex = Math.floor(Math.random() * 16) + 1;
+    const randomImage = `/content/c-${randomImageIndex}.png`;
+    randomImageContainer.src = randomImage;
+
+    function heightAdjust() {
+        const textarea = document.querySelector(".autoexpand");
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
+    }
+    window.addEventListener('load', heightAdjust);
+</script>
+
+</html>

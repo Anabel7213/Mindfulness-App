@@ -1,0 +1,261 @@
+@import "mixins";
+
+// "/" directory //
+.form-container {
+    width: fit-content;
+    .date {
+        @include font-regular($brown, 1.2rem, 500);
+    }
+    .title {
+        @include font-regular($brown, 4rem, 600);
+        text-align: center;
+    }
+    .btn-container {
+        width: 100%;
+        #sup-email-btn {
+            @include main-btn($brown, transparent, 2px solid $brown, 1rem);
+        }
+        #sup-google-btn {
+            @include main-btn($brighter-beige, $brown, none, 1rem);
+        }
+        #login-btn {
+            @include main-btn($brown, transparent, none, 0);
+            &:hover {
+                box-shadow:none;
+            }
+        }
+        .w-arrow {
+            &:hover {
+                .arrow {
+                    cursor: pointer;
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+// "/" directory //
+
+// "/signup" & "/login" directory //
+.signup-form, .login-form {
+    input {
+        @include main-btn($brown, transparent, 2px solid $brown, 1rem);
+        text-align:start;
+        &:hover {
+            box-shadow:none;
+        }
+        &::placeholder {
+            color: rgba(116, 84, 69, 0.6)
+        }
+    }
+    .login-btn {
+        @include main-btn($brighter-beige, $brown, none, 1rem);
+    }
+}
+// "/signup" & "/login" directory //
+
+// "/home" directory //
+header {
+    .navigation {
+        form {
+            width:fit-content;
+        }
+        .fa-circle-question {
+            color: $dimmed-beige;
+            &:hover {
+                color: $light-beige;
+            }
+        }
+        #scriptures-btn {
+            @include main-btn($dimmed-beige, transparent, 2px solid $dimmed-beige, .8rem 1.5rem);
+            width:fit-content;
+            &:hover {
+                box-shadow:none;
+                color: $light-beige;
+            }
+        }
+    }
+}
+.container-to-fit {
+    padding-bottom:8rem;
+}
+.container-outer {
+    gap: 5rem;
+}
+.card-container  {
+    @media (max-width:786px) {
+        margin-top: 3rem;
+    }
+    .journal-btn {
+        @include main-btn($darker-green, $light-beige, none, 1rem);
+        &:hover {
+            box-shadow: 0px 5px 0px 0px rgba(140, 137, 120, 0.5);
+        }
+    }
+    .thematic-thumbnail {
+        width: 324px;
+        height: auto;
+        border: 2px solid #FFF6DD;
+        border-radius: .5rem;
+        @media (max-width:786px) {
+            width: 100%;
+        }
+    }
+}
+.dev-note-container {
+    max-width: 400px;
+    padding: 1rem;
+    .note-title {
+        @include font-regular($light-beige, 1.2rem, 600);
+    }
+    .note-content, .note-list {
+        @include font-regular($light-beige, 1.2rem, 500);
+    }
+}
+// "/home" directory //
+
+// "/composer" directory //
+.cover-img {
+    width: 100%;
+    max-height: 264px;
+    border-bottom: 4px solid #FFF6DD;
+    @media (max-width:768px) {
+        height: 164px;
+    }
+}
+.logo {
+    position:absolute;
+    top:2%;
+    left:2%;
+}
+.composer-outer  {
+    @media (max-width: 786px) {
+        .row {
+            display:flex;
+            gap:3rem;
+        }
+    }
+    padding-bottom:9rem;
+    }
+    .play-btn-container {
+        @include main-btn($darker-green, $light-beige, none, 1rem);
+        cursor: pointer;
+    }
+    
+    .generate-prompt {
+        @include main-btn($light-beige, transparent, 2px solid $light-beige, 1rem);
+        cursor: pointer;
+    }
+    textarea {
+        width: 100%;
+        max-height:300px !important;
+        color: #FFF6DD;
+        background: transparent;
+        outline: none;
+        border: none;
+        font-size: 1.5rem;
+        @media (max-width:786px) {
+            font-size:1.4rem;
+        }
+        font-weight: 600;
+        resize: none;
+        &::placeholder {
+            color: rgba(242, 232, 205, 0.5);
+        }
+    }
+.save-exit {
+    @include main-btn($light-beige, transparent, none, 0);
+    &:hover {
+        box-shadow:none;
+        color:$dimmed-beige;
+        transition:all .5s;
+    }
+}
+// "/composer" directory //
+
+// "/entry" directory //
+    .wrapper {
+        padding-bottom:8rem;
+    }
+    input[name="date"] {
+        width: fit-content;
+        background: transparent;
+        outline: none;
+        border: none;
+        font-size: 1.2rem;
+        color: rgba(242, 232, 205, 0.5) !important;
+        -webkit-text-fill-color: rgba(242, 232, 205, 0.5) !important;
+        font-weight: 600;
+        &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            font-size: 2rem;
+            background-image: none;
+        }
+    }
+    .random-bg {
+        object-fit:cover;
+    }
+    input[name="title"] {
+        color: #FFF6DD;
+        height: fit-content;
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border: none;
+        font-size: 2.8rem;
+        @media (max-width:786px) {
+            font-size:2rem;
+        }
+        font-weight: 600;
+        &::placeholder {
+            color: rgba(242, 232, 205, 0.5);
+        }
+    }
+    .autoexpand {
+        max-height:none !important;
+    }
+    .entry-content-container {
+        margin:0 .5rem;
+        @media (min-width: 786px) {
+            margin:0 4rem;
+        }
+    }
+// "/entry" directory //
+
+// "/signatures" directory //
+.bg-img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #FFF6DD;
+    border-radius: .5rem 0rem 0rem 0.5rem;
+    @media (max-width: 786px) {
+        height: 200;
+    }
+}
+.content-holder {
+    width: 600px;
+    border: 2px solid #FFF6DD;
+    border-left: 0px;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+.content-item {
+    @include font-regular($light-beige, 1.2rem, 600);
+}
+.entry-instance-container {
+    overflow-y: scroll;
+    height: 580px;
+}
+.logout-btn {
+    @include main-btn($dimmed-beige, transparent, none, 0);
+    width:fit-content;
+    &:hover {
+        box-shadow:none;
+        color: $light-beige;
+    }
+}
+.pseudo-delete-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+// "/signatures" directory //

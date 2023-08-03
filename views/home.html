@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Secret Scriptures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <div class="color-cover">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header d-flex align-items-center justify-content-between">
+                            <a href="/home"><img src="/content/Logo.svg" alt="My Secret Scriptures Logo"></a>
+                            <div class="navigation d-flex align-items-center gap-4 w-100 justify-content-end">
+                                <i class="fa-regular fa-circle-question fa-xl d-none"></i>
+                                <a id="scriptures-btn" href="/scriptures">My scriptures</a>
+                                <form action="/logout" , method="POST" class="logout-form">
+                                    <button type="submit" class="logout-btn">Log out</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container container-to-fit d-flex justify-content-center align-items-center mt-5">
+                <div class="container-outer d-flex align-items-center justify-content-center flex-wrap">
+
+                    <div class="card-container d-flex flex-column gap-5 justify-content-center align-items-center">
+                        <div class="row">
+                            <div class="col d-flex gap-5 flex-wrap justify-content-center">
+
+                                <div id="contemplate" class="category-card d-flex flex-column gap-3 align-items-center">
+                                    <img class="thematic-thumbnail" src="/content/Bg-contemplate.png"
+                                        alt="Thematic thumbnail">
+                                    <a id="contemplate-btn" class="journal-btn"
+                                        href="/composer/:categoryName">Contemplate</a>
+                                </div>
+                                <div id="reflect" class="category-card d-flex flex-column gap-3 align-items-center">
+                                    <img class="thematic-thumbnail" src="/content/Bg-reflect.png"
+                                        alt="Thematic thumbnail">
+                                    <a id="reflect-btn" class="journal-btn" href="/composer/:categoryName">Reflect</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex gap-5 flex-wrap justify-content-center">
+                                <div id="explore" class="category-card d-flex flex-column gap-3 align-items-center">
+                                    <img class="thematic-thumbnail" src="/content/Bg-explore.png"
+                                        alt="Thematic thumbnail">
+                                    <a id="explore-btn" class="journal-btn" href="/composer/:categoryName">Explore</a>
+                                </div>
+                                <div id="wonder" class="category-card d-flex flex-column gap-3 align-items-center">
+                                    <img class="thematic-thumbnail" src="/content/Bg-wonder.png"
+                                        alt="Thematic thumbnail">
+                                    <a id="wonder-btn" class="journal-btn" href="/composer/:categoryName">Wonder</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dev-note-container d-flex flex-column">
+
+                        <div class="note-header d-flex justify-content-between align-items-center gap-5">
+                            <div class="note-title">A note from the developer...</div>
+                            <i class="fa-solid fa-xmark fa-xl" style="color:#F2E8CD"></i>
+                        </div>
+
+                        <div class="note-body mt-3">
+                            <p class="note-content">Welcome to My Secret Scriptures, designed to be your safe personal space.</p>
+                            <p class="note-content">It's built upon these four core values:</p>
+                            <ul>
+                                <li class="note-list">The importance of deep thinking</li>
+                                <li class="note-list">Regular self-reflection</li>
+                                <li class="note-list">Continuous exploration of the self</li>
+                                <li class="note-list">Lifelong curiosity about the world</li>
+                            </ul>
+                            <p class="note-content">Each section contains diligently composed prompts, should you need some guidance.</p>
+                            <p class="note-content">Journaling has been proven to reduce stress and help gain control over your mind. Thus, the purpose of My Secret Scriptures is to help you achieve lasting growth and tranquility.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/c193febbe5.js" crossorigin="anonymous"></script>
+    <script src="/animations.js"></script>
+
+</body>
+
+</html>
