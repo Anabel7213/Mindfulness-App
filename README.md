@@ -8,5 +8,6 @@ Each journaling section features unique prompts pulled from a local JSON file. T
 
 There are four different background sounds that a user can play while being in editor mode.
 
-Feel free to check out the app (deployed with Render free tire so first time you load it might take up to a minute), and use it, any feedback is welcomed:
-https://my-secret-scriptures.onrender.com
+## Demo Credentials
+Email: test@gmail.com
+Password: 123456
